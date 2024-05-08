@@ -9,15 +9,15 @@ class Program
 {
     static void Main()
     {
-        string txtFilePath = "D:\\Tool2\\2010.txt";
-        string datFilePath = "D:\\Tool2\\autoDCTitles.dat";
+        string txtFilePath = "D:\\School\\5th Year\\OJT\\Innodata\\PAN\\2010.txt";
+        string datFilePath = "D:\\School\\5th Year\\OJT\\Innodata\\PAN\\autoDCTitles.dat";
 
         List<TxtJournal> txtJournals = ReadTxtJournals(txtFilePath);
         List<DatJournal> datJournals = ReadDatJournals(datFilePath);
 
         List<OutJournal> outJournals = CompareJournals(txtJournals, datJournals);
 
-        WriteOutputToFile(outJournals, "D:\\Tool2\\output.txt");
+        WriteOutputToFile(outJournals, "D:\\School\\5th Year\\OJT\\Innodata\\PAN\\output.txt");
 
         Console.WriteLine("Output written to output.txt");
     }
@@ -91,11 +91,7 @@ class Program
                     string issnMatch = "", eissnMatch = "", titleMatch = "";
                     if (!string.IsNullOrWhiteSpace(txtJournal.ISSN) || !string.IsNullOrWhiteSpace(datJournal.ISSN))
                     {
-                        if (string.IsNullOrWhiteSpace(txtJournal.ISSN) && string.IsNullOrWhiteSpace(datJournal.ISSN))
-                        {
-                            issnMatch = "matched";
-                        }
-                        else if (txtJournal.ISSN == " ")
+                        if (txtJournal.ISSN == " ")
                         {
                             issnMatch = "datonly";
                         }
@@ -107,22 +103,17 @@ class Program
                         {
                             if(datJournal.ISSN == txtJournal.ISSN)
                             {
-                                issnMatch = "matched";
+                                issnMatch = "match";
                             }
                             else
                             {
-                                issnMatch = "not matched";
+                                issnMatch = "not match";
                             }
                         }
                     }
-                    else { issnMatch = "matched"; }
                     if (!string.IsNullOrWhiteSpace(txtJournal.eISSN) || !string.IsNullOrWhiteSpace(datJournal.eISSN))
                     {
-                        if (string.IsNullOrWhiteSpace(txtJournal.eISSN) && string.IsNullOrWhiteSpace(datJournal.eISSN))
-                        {
-                            eissnMatch = "matched";
-                        }
-                        else if (txtJournal.eISSN == " ")
+                        if (txtJournal.eISSN == " ")
                         {
                             eissnMatch = "datonly";
                         }
@@ -134,22 +125,17 @@ class Program
                         {
                             if (datJournal.eISSN == txtJournal.eISSN)
                             {
-                                eissnMatch = "matched";
+                                eissnMatch = "match";
                             }
                             else
                             {
-                                eissnMatch = "not matched";
+                                eissnMatch = "not match";
                             }
                         }
                     }
-                    else { eissnMatch = "matched"; }
                     if (!string.IsNullOrWhiteSpace(txtJournal.Title) || !string.IsNullOrWhiteSpace(datJournal.Title))
                     {
-                        if(string.IsNullOrWhiteSpace(txtJournal.Title) && string.IsNullOrWhiteSpace(datJournal.Title))
-                        {
-                            titleMatch = "matched";
-                        }
-                        else if (txtJournal.Title == " ")
+                        if (txtJournal.Title == " ")
                         {
                             titleMatch = "datonly";
                         }
@@ -161,15 +147,14 @@ class Program
                         {
                             if (datJournal.Title == txtJournal.Title)
                             {
-                                titleMatch = "matched";
+                                titleMatch = "match";
                             }
                             else
                             {
-                                titleMatch = "not matched";
+                                titleMatch = "not match";
                             }
                         }
                     }
-                    else { titleMatch = "matched"; }
 
                     outJournals.Add(new OutJournal
                     {
@@ -180,17 +165,6 @@ class Program
                     });
                     break;
                 }
-            }
-
-            if (!found)
-            {
-                outJournals.Add(new OutJournal
-                {
-                    PAN = txtJournal.PAN,
-                    Title = "txtonly",
-                    ISSN = "txtonly",
-                    eISSN = "txtonly"
-                });
             }
         }
         return outJournals;
