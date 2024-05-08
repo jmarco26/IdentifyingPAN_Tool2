@@ -1,0 +1,14 @@
+D:\Tool2\Tool2-Console\Tool2-Console\bin\Debug\net8.0\Tool2-Console.exe
+D:\Tool2\Tool2-Console\Tool2-Console\bin\Debug\net8.0\Tool2-Console.deps.json
+D:\Tool2\Tool2-Console\Tool2-Console\bin\Debug\net8.0\Tool2-Console.runtimeconfig.json
+D:\Tool2\Tool2-Console\Tool2-Console\bin\Debug\net8.0\Tool2-Console.dll
+D:\Tool2\Tool2-Console\Tool2-Console\bin\Debug\net8.0\Tool2-Console.pdb
+D:\Tool2\Tool2-Console\Tool2-Console\obj\Debug\net8.0\Tool2-Console.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tool2\Tool2-Console\Tool2-Console\obj\Debug\net8.0\Tool2-Console.AssemblyInfoInputs.cache
+D:\Tool2\Tool2-Console\Tool2-Console\obj\Debug\net8.0\Tool2-Console.AssemblyInfo.cs
+D:\Tool2\Tool2-Console\Tool2-Console\obj\Debug\net8.0\Tool2-Console.csproj.CoreCompileInputs.cache
+D:\Tool2\Tool2-Console\Tool2-Console\obj\Debug\net8.0\Tool2-Console.dll
+D:\Tool2\Tool2-Console\Tool2-Console\obj\Debug\net8.0\refint\Tool2-Console.dll
+D:\Tool2\Tool2-Console\Tool2-Console\obj\Debug\net8.0\Tool2-Console.pdb
+D:\Tool2\Tool2-Console\Tool2-Console\obj\Debug\net8.0\Tool2-Console.genruntimeconfig.cache
+D:\Tool2\Tool2-Console\Tool2-Console\obj\Debug\net8.0\ref\Tool2-Console.dll
